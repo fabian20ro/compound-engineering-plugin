@@ -330,9 +330,13 @@ codex-ceb feat/new-agents        # install a pushed branch to Codex
 
 Codex installs keep generated plugin skills isolated under `~/.codex/skills/compound-engineering/` and do not write new files into `~/.agents`. The installer removes old CE-managed `.agents/skills` symlinks when it can prove they point back to CE's Codex-managed store, which prevents stale Codex installs from shadowing Copilot's native plugin install.
 
-## Troubleshooting
+### Alternative Package Managers
 
-### Codex skills work but review or research delegation fails
+If `bun` is not available in your environment, you can still install and work with the plugin using `npm`. After running `npm install`, ensure that any scripts requiring `bun-specific` features are adjusted.
+
+```bash
+npm install
+```
 
 Run the agent install step:
 
